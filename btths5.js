@@ -1,3 +1,30 @@
+let signInTime = 0;
+let successSignIn = false;
+
+do {
+  let namePeople = prompt("Mời bạn nhập tài khoản:");
+  let password = prompt("Mời bạn nhập mật khẩu:");
+
+  if (namePeople === "admin" && password === "12345") {
+    alert("Đăng nhập thành công!");
+    successSignIn = true;
+  } else {
+    signInTime++;
+    let falseTime = 3 - signInTime;
+
+    if (namePeople !== "admin" && password !== "12345") {
+      alert(`Sai cả tài khoản và mật khẩu! Bạn còn ${falseTime} lần thử.`);
+    } else if (namePeople !== "admin") {
+      alert(`Sai tài khoản! Bạn còn ${falseTime} lần thử.`);
+    } else {
+      alert(`Sai mật khẩu! Bạn còn ${falseTime} lần thử.`);
+    }
+  }
+} while (signInTime < 3 && !successSignIn);
+
+if (!successSignIn) {
+  alert("Tài khoản đã bị khóa do nhập sai quá 3 lần!");
+} else {
 let choice;
 let books = ["Nha Gia Kim", "Dac Nhan Tam", "Tuan Lam Viec 4 Gio"];
 do{
@@ -64,3 +91,4 @@ do{
             break; 
     }
 }while(choice!==0);
+}

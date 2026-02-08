@@ -33,12 +33,12 @@ for(let i=0;i<booksCategory.length;i++){
     }
 }
 console.log(`tất cả mã sách thuộc cả hai thể loại "JavaScript" và "Web":${bookJavaWeb}`);
-let minQuantity = inventoryQuatity[0];
+let minQuanlity = inventoryQuality[0];
 let minIndex = 0;
 
 for (let i = 1; i < inventoryQuatity.length; i++) {
-    if (inventoryQuatity[i] < minQuantity) {
-        minQuantity = inventoryQuatity[i];
+    if (inventoryQuality[i] < inventoryQuanlity) {
+        minQuanlity = inventoryQuality[i];
         minIndex = i;
     }
 }
